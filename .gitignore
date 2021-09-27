@@ -1,1 +1,3 @@
-/admin/includes/new_config.php
+./admin/includes/new_config.php
+
+new_config.php
