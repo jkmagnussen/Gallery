@@ -23,11 +23,10 @@ $user_found = User::verify_user($username, $password);
     }
         
 } else {
+    $the_message = "";
     $username = "";
     $password = "";
 }
-
-$the_message = "";
 
 ?>
 
