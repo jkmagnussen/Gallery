@@ -11,7 +11,7 @@ if(isset($_POST['submit'])){
     $password = trim($_POST['password']);
 
 
-    // Methos to check database user 
+    // Methos to check database userr
 
 $user_found = User::verify_user($username, $password);
 
