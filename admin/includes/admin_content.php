@@ -10,29 +10,52 @@
 
                 <?php 
 
-
-
-
-
                 // $user = new User();
 
-                // $user->username = "Maxweb"; 
-                // $user->password = "123"; 
-                // $user->first_name = "Maxweb"; 
-                // $user->last_name = "Solutions"; 
+                // $user->username = "Modern"; 
+                // $user->password = "PHP"; 
+                // $user->first_name = "PHP book"; 
+                // $user->last_name = "OREILLY"; 
 
                 // $user->create();
 
-                // $user = User::find_user_by_id(4);
-                // $user->last_name = "Williams";
+                // $user = User::find_user_by_id(2);
+                // $user->last_name = "Magnussen";
 
                 // $user->update();
 
-                $user = User::find_user_by_id(4);
-                $user->delete();
+                // $user = User::find_user_by_id(6);
+                // $user->delete();
+
+                // $user = User::find_user_by_id(2);
+
+                // $user->username = "JKMagnussen";
+                // $user->save();
+
+                // $user = new User();
+
+                // $user->username = "BobRoss";
+                // $user->save();
+
+                // $photos = Photo::find_all();
+
+                // foreach ($photos as $photo){
+                //     echo $photo->title;
+                // }
+
+                $photo = new Photo();
+
+                $photo->title = "Example";
+                $photo->description = "Example1";
+                $photo->filename = "image.jpg";
+                $photo->type = "image";
+                $photo->size = "13";
+
+                $photo->create();
+
+                echo INCLUDES_PATH;
 
                 ?>
-
 
                 <ol class="breadcrumb">
                     <li>
