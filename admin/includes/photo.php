@@ -3,8 +3,8 @@
 class Photo extends Db_object{
 
     protected static $db_table = "photos";
-    protected static $db_table_fields = array('photo_id', 'title', 'description', 'filename', 'type', 'size');
-    public $photo_id;
+    protected static $db_table_fields = array(NULL, 'title', 'description', 'filename', 'type', 'size');
+    public $photo_id = null;
     public $title;
     public $description;
     public $filename;
@@ -29,7 +29,6 @@ class Photo extends Db_object{
 // This is passing $_FILES['uploaded_file'] as an argument
  
 public function set_file($file){
-
     if(empty($file) || !$file || !is_array($file)){
         $this->errors[] = "There was no file uploaded here.";
         return false;
@@ -65,25 +64,15 @@ public function save(){
         }
         
 
-         try{
-             var_dump($this->tmp_path);
-            if(move_uploaded_file($this->tmp_path, $target_path)){
+        if(move_uploaded_file($this->tmp_path, $target_path)){
             if($this->create()){
                 unset($this->tmp_path);
                 return true;
             }
         } else {
-            $this->errors[] = "The file directory probably does not have permission. {$this->tmp_path}";
+            $this->errors[] = "The file directory probably does not have permission.";
             return false;
         }
-        $this->create();
-
-
-
-         } catch(\Exception $e){
-            //  var_dump($e);
-         }
-
         
     }
   }

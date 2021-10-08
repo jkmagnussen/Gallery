@@ -55,9 +55,6 @@
 
                 // echo SITE_ROOT . "<br>";
 
-                echo TEMP_ROOT;
-
-                sys_get_temp_dir();
             
 
 
