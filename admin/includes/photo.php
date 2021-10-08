@@ -12,9 +12,8 @@ class Photo extends Db_object{
     public $size; 
 
     public $tmp_path;
-
     public $upload_directory = "images"; 
-    public $custom_errors = array();
+    public $errors = array();
     public $upload_errors_array = array(
 
     UPLOAD_ERR_OK => "There is no error",
@@ -37,7 +36,7 @@ public function set_file($file){
     }elseif($file['error'] !=0){
         $this->errors[] = $this->upload_errors_array[$file['error']];
         return false;
-    }else {
+    }else{
         $this->filename = basename($file['name']);
         $this->tmp_path = $file['tmp_name'];
         $this->type = $file['type'];
@@ -47,18 +46,47 @@ public function set_file($file){
 
 public function save(){
 
-    if($this->photo_id){
+    if($this->photo_id){ 
         $this->update();
     }else{
         if(!empty($this->errors)){
             return false;
         }
+        if(empty($this->filename) || empty($this->tmp_path)){
+            $this->errors[] = "the file was not available";
+            return false;
+        }
+    
+        $target_path = SITE_ROOT_ALT . DS . 'admin' . DS . $this->upload_directory . DS . $this->filename;
+
+        if(file_exists($target_path)){
+            $this->errors[] = "The file {$this->filename} already exists";
+            return false;
+        }
         
+
+         try{
+             var_dump($this->tmp_path);
+            if(move_uploaded_file($this->tmp_path, $target_path)){
+            if($this->create()){
+                unset($this->tmp_path);
+                return true;
+            }
+        } else {
+            $this->errors[] = "The file directory probably does not have permission. {$this->tmp_path}";
+            return false;
+        }
         $this->create();
+
+
+
+         } catch(\Exception $e){
+            //  var_dump($e);
+         }
+
+        
     }
-
-}
-
+  }
 } // End of class Photo
 
 ?>

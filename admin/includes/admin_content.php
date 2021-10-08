@@ -43,17 +43,23 @@
                 //     echo $photo->title;
                 // }
 
-                $photo = new Photo();
+                // $photo = new Photo();
 
-                $photo->title = "Example";
-                $photo->description = "Example1";
-                $photo->filename = "image.jpg";
-                $photo->type = "image";
-                $photo->size = "13";
+                // $photo->title = "Example";
+                // $photo->description = "Example1";
+                // $photo->filename = "image.jpg";
+                // $photo->type = "image";
+                // $photo->size = "13";
 
-                $photo->create();
+                // $photo->create();
 
-                echo INCLUDES_PATH;
+                // echo SITE_ROOT . "<br>";
+
+                echo TEMP_ROOT;
+
+                sys_get_temp_dir();
+            
+
 
                 ?>
 
