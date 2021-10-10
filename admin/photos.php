@@ -1,6 +1,13 @@
 <?php include("includes/header.php"); ?>
 
-<!-- Navigation -->
+<?php if(!$session->is_signed_in()){redirect("login.php");} ?>
+
+<?php 
+
+$photos = Photo::find_all();
+
+?>
+
 <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
     <!-- Brand and toggle get grouped for better mobile display -->
 
@@ -13,10 +20,6 @@
     <!-- /.navbar-collapse -->
 </nav>
 
-
-
-
-
 <div id="page-wrapper">
 
     <div class="container-fluid">
@@ -28,14 +31,39 @@
                     Photos
                     <small>Subheading</small>
                 </h1>
-                <ol class="breadcrumb">
-                    <li>
-                        <i class="fa fa-dashboard"></i> <a href="index.html">Dashboard</a>
-                    </li>
-                    <li class="active">
-                        <i class="fa fa-file"></i> Blank Page
-                    </li>
-                </ol>
+
+                <div class="col-md-12">
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th>Photo</th>
+                                <th>Id</th>
+                                <th>File Name</th>
+                                <th>Title</th>
+                                <th>Size</th>
+</tr>
+</thead>
+<tbody>
+
+<?php foreach($photos as $photo ): ?>
+
+    <tr>
+        <td><img src="http://placehold.it/62x62" alt="" /></td>
+        <td><?php echo $photo->id; ?></td>
+        <td><?php echo $photo->filename; ?></td>
+        <td><?php echo $photo->title; ?></td>
+        <td><?php echo $photo->size; ?></td>
+
+</tr>
+
+<?php endforeach; ?> 
+
+</tbody>
+
+</table><!--End of table -->
+               
+
+
             </div>
         </div>
         <!-- /.row -->
@@ -44,6 +72,6 @@
     <!-- /.container-fluid -->
 
 </div>
-<!-- /#page-wrapper -->
+// <!-- /#page-wrapper -->
 
 <?php include("includes/footer.php"); ?>
