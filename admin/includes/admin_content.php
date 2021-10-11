@@ -9,6 +9,17 @@
                 </h1>
 
                 <?php 
+                
+                // $user = User::find_by_id(2);
+
+                // echo $user->username;
+
+                // $photo = Photo::find_by_id(6);
+
+                // echo $photo->filename;
+
+
+
 
                 // $user = new User();
 
