@@ -29,6 +29,10 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <link rel="stylesheet" href="css/summernote.css" >
+
+    <link href="css/styles.css" rel="stylesheet">
+
 </head>
 
 <body>

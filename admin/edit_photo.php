@@ -55,6 +55,12 @@ if(empty($_GET['id'])){
                 <div class="form-group">
                     <input type="text" name="title" class="form-coltrol" value="<?php echo $photo->title; ?> ">
                 </div>
+                
+                <div class="form-group">
+                    <a class="thumbnail" href="#"><img src="<?php echo $photo->picture_path(); ?>" alt=""></a>
+
+
+                </div>
 
                 <div class="form-group">
                     <label for="caption">Caption</label>
@@ -67,12 +73,11 @@ if(empty($_GET['id'])){
                 </div>
 
                 <div class="form-group">
-                    <label for="caption">Description</label>
-                    <textarea class = "form-control" name="description" id="" cols="30" rows="10"><?php echo $photo->description; ?>
+                    <label for="summernote">Description</label>
+                    <textarea id="summernote" class = "form-control" name="description" id="" cols="30" rows="10"><?php echo $photo->description; ?>
                 </textarea>
                     
                 </div>
-                
             </div>
 
 
