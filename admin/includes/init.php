@@ -23,5 +23,6 @@ require_once("user.php");
 require_once("comment.php");
 require_once("photo1.php");
 require_once("session.php");
+require_once("paginate.php");
 
 ?>

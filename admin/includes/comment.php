@@ -17,7 +17,8 @@ public static function create_comment($photo_id, $author, $body){
 
         $comment->photo_id = (int)$photo_id;
         $comment->author = $author;
-        $comment->$body = $body; 
+        $comment->body = $body; 
+
 
         return $comment;
 
