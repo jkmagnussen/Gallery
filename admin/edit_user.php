@@ -17,7 +17,7 @@ $user = User::find_by_id($_GET['id']);
             $user->username = $_POST['username'];
             $user->first_name = $_POST['first_name'];
             $user->last_name = $_POST['last_name'];
-            $user->password = $_POST['password'];
+            $user->password = $_POST['password'];   
                 
             if(empty($_FILES['user_image'])){
                 $user->save();
@@ -31,6 +31,8 @@ $user = User::find_by_id($_GET['id']);
         }  
     }
 ?>
+
+//Extra HTML 
 
 <div class="modal fade" id="photo-library">
   <div class="modal-dialog">
