@@ -10,7 +10,7 @@
 
                 <?php 
 
-                // $user = new User();
+                // $user = new User(); new class instance
 
                 // $user->username = "Modern"; 
                 // $user->password = "PHP"; 
