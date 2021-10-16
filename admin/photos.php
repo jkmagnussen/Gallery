@@ -15,7 +15,6 @@ $photos = Photo::find_all();
 
     <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
 
-
     <?php include("includes/side_nav.php") ?>
     <!-- /.navbar-collapse -->
 </nav>
@@ -23,7 +22,7 @@ $photos = Photo::find_all();
 <div id="page-wrapper">
 
     <div class="container-fluid">
-
+ 
         <!-- Page Heading -->
         <div class="row">
             <div class="col-lg-12">
@@ -32,7 +31,7 @@ $photos = Photo::find_all();
                     <small>Subheading</small>
                 </h1>
 
-                <div class="col-md-12">
+                <div class="col-md-12"> 
                     <table class="table">
                         <thead>
                             <tr>
@@ -40,20 +39,37 @@ $photos = Photo::find_all();
                                 <th>Id</th>
                                 <th>File Name</th>
                                 <th>Title</th>
-                                <th>Size</th>
+                                <th>Size</th> 
+                                <th>Comments </th> 
 </tr>
 </thead>
 <tbody>
 
 <?php foreach($photos as $photo ): ?>
-
     <tr>
-        <td><img src="http://placehold.it/62x62" alt="" /></td>
+        <td><img class="admin_photo_thumbnail" src="<?php echo $photo->picture_path(); ?>" alt="" />
+        <div class="pictures_link">
+            <a href="delete_photo.php?id=<?php echo $photo->id ?>">Delete</a>
+            <a href="edit_photo.php?id=<?php echo $photo->id ?>">Edit</a>
+            <a href="../photo.php?id=<?php echo $photo->id; ?> ">View</a>
+        </div>
+    
+    
+    </td>
         <td><?php echo $photo->id; ?></td>
         <td><?php echo $photo->filename; ?></td>
         <td><?php echo $photo->title; ?></td>
-        <td><?php echo $photo->size; ?></td>
-
+        <td><?php echo $photo->size; ?></td> 
+        <td>
+        <a href="comment_photo.php?id=<?php echo $photo->id; ?>">
+            <?php 
+            
+            $comments = Comment::find_the_comments($photo->id); 
+            echo count($comments);
+            
+            ?>
+            </a>
+        </td> 
 </tr>
 
 <?php endforeach; ?> 
@@ -62,8 +78,6 @@ $photos = Photo::find_all();
 
 </table><!--End of table -->
                
-
-
             </div>
         </div>
         <!-- /.row -->
@@ -72,6 +86,6 @@ $photos = Photo::find_all();
     <!-- /.container-fluid -->
 
 </div>
-// <!-- /#page-wrapper -->
+ <!-- /#page-wrapper -->
 
 <?php include("includes/footer.php"); ?>
