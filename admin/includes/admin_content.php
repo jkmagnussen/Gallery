@@ -1,6 +1,6 @@
     <div class="container-fluid">
 
-        <!-- Page Heading -->
+        <!-- Page Headinggg -->
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">
@@ -25,15 +25,15 @@
                             <a href="#">
                                 <div class="panel-footer">
 
-                                  <span class="pull-left">View Details</span> 
-                               <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span> 
+                                    <span class="pull-left">View Details</span>
+                                    <span class="pull-right"><i class="fa fa-arrow-circle-right"></i></span>
                                     <div class="clearfix"></div>
                                 </div>
                             </a>
                         </div>
                     </div>
 
-                     <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-3 col-md-6">
                         <div class="panel panel-green">
                             <div class="panel-heading">
                                 <div class="row">
@@ -57,7 +57,7 @@
                     </div>
 
 
-                     <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-3 col-md-6">
                         <div class="panel panel-yellow">
                             <div class="panel-heading">
                                 <div class="row">
@@ -83,7 +83,7 @@
                         </div>
                     </div>
 
-                      <div class="col-lg-3 col-md-6">
+                    <div class="col-lg-3 col-md-6">
                         <div class="panel panel-red">
                             <div class="panel-heading">
                                 <div class="row">
@@ -107,75 +107,73 @@
                     </div>
 
 
-                        </div> <!--First Row-->
+                </div>
+                <!--First Row-->
 
-                        <div class="row">
+                <div class="row">
 
-                        <div id="piechart" style="width: 900px; height: 500px;"></div>
+                    <div id="piechart" style="width: 900px; height: 500px;"></div>
 
-                        </div>
+                </div>
 
-<<<<<<< HEAD
-                // $user = new User(); new class instance
+                <<<<<<< HEAD // $user=new User(); new class instance // $user->username = "Modern";
+                    // $user->password = "PHP";
+                    // $user->first_name = "PHP book";
+                    // $user->last_name = "OREILLY";
 
-                // $user->username = "Modern"; 
-                // $user->password = "PHP"; 
-                // $user->first_name = "PHP book"; 
-                // $user->last_name = "OREILLY"; 
+                    // $user->create();
 
-                // $user->create();
+                    // $user = User::find_user_by_id(2);
+                    // $user->last_name = "Magnussen";
 
-                // $user = User::find_user_by_id(2);
-                // $user->last_name = "Magnussen";
+                    // $user->update();
 
-                // $user->update();
+                    // $user = User::find_user_by_id(6);
+                    // $user->delete();
 
-                // $user = User::find_user_by_id(6);
-                // $user->delete();
+                    // $user = User::find_user_by_id(2);
 
-                // $user = User::find_user_by_id(2);
+                    // $user->username = "JKMagnussen";
+                    // $user->save();
 
-                // $user->username = "JKMagnussen";
-                // $user->save();
+                    // $user = new User();
 
-                // $user = new User();
+                    // $user->username = "BobRoss";
+                    // $user->save();
 
-                // $user->username = "BobRoss";
-                // $user->save();
+                    // $photos = Photo::find_all();
 
-                // $photos = Photo::find_all();
+                    // foreach ($photos as $photo){
+                    // echo $photo->title;
+                    // }
 
-                // foreach ($photos as $photo){
-                //     echo $photo->title;
-                // }
+                    // $photo = new Photo();
 
-                // $photo = new Photo();
+                    // $photo->title = "Example";
+                    // $photo->description = "Example1";
+                    // $photo->filename = "image.jpg";
+                    // $photo->type = "image";
+                    // $photo->size = "13";
 
-                // $photo->title = "Example";
-                // $photo->description = "Example1";
-                // $photo->filename = "image.jpg";
-                // $photo->type = "image";
-                // $photo->size = "13";
+                    // $photo->create();
 
-                // $photo->create();
-
-                // echo SITE_ROOT . "<br>";
-
-            
+                    // echo SITE_ROOT . "<br>";
 
 
-                ?>
 
-                <ol class="breadcrumb">
-                    <li>
-                        <i class="fa fa-dashboard"></i> <a href="index.html">Dashboard</a>
-                    </li>
-                    <li class="active">
-                        <i class="fa fa-file"></i> Blank Page
-                    </li>
-                </ol>
-=======
->>>>>>> 3f0e9f49bdcd226df49997052296eb1746130ef3
+
+                    ?>
+
+                    <ol class="breadcrumb">
+                        <li>
+                            <i class="fa fa-dashboard"></i> <a href="index.html">Dashboard</a>
+                        </li>
+                        <li class="active">
+                            <i class="fa fa-file"></i> Blank Page
+                        </li>
+                    </ol>
+                    =======
+                    >>>>>>> 3f0e9f49bdcd226df49997052296eb1746130ef3
             </div>
         </div>
         <!-- /.row -->
