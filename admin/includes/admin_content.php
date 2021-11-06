@@ -1,6 +1,6 @@
     <div class="container-fluid">
 
-        <!-- Page Headinggg -->
+        <!-- Page Headingg -->
         <div class="row">
             <div class="col-lg-12">
                 <h1 class="page-header">
