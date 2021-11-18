@@ -5,7 +5,7 @@
             <div class="col-lg-12">
                 <h1 class="page-header">
                     Admin
-                    <small>Dashboard</small>
+                    <small>Dashboooard</small>
                 </h1>
 
                 <div class="row">
