@@ -10,6 +10,8 @@ if(empty($_GET['id'])) {
     redirect("index.php");
 }
 
+// comment 
+
 $photo = Photo::find_by_id($_GET['id']);
 
 
