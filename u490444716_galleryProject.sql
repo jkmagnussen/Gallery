@@ -54,6 +54,7 @@ INSERT INTO `photos` (`photo_id`, `title`, `description`, `filename`, `type`, `s
 -- Table structure for table `users`
 --
 
+
 CREATE TABLE `users` (
   `id` int(11) NOT NULL,
   `username` varchar(255) COLLATE utf8mb4_unicode_ci NOT NULL,
